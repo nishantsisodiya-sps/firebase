@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+.user-auth h1{
+    margin-top: 50px;
+    margin-bottom: 40px; 
+    text-align: center; 
+}
+
+.user-auth {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.myDiv{
+    background-color: rgb(208 196 211 / 17%);
+    height: 30em;
+    width: 32em;
+    margin-top: 4%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.user-auth a{
+    cursor: pointer;
+    color: blue;
+}
+ .invalid-input{
+    color: red;
+} 
+input{
+    height: 3em;
+    width: 25em;
+    margin-top: 2%;
+    border: 2px solid grey;
+    border-radius: 1em;
+}
+input[type = 'text']{
+    text-align: center;
+}
+input[type = 'password']{
+    text-align: center;
+}
+.eye{
+    position: relative;
+    bottom: 2rem;
+    left: 152px;
+    font-size: large;
+    cursor: pointer;
+}
+
+input.ng-touched.ng-invalid{
+    border: 2px solid rgb(223, 46, 46);
+    box-shadow: 0 0 8px inset rgb(160, 28, 28) ;
+  }
+
+  .form-button{
+    width: 22rem;
+  }
+
+  .anotherdiv{
+    background-color: rgb(208 196 211 / 17%);
+    height: 9em;
+    width: 42em;
+    margin-top: 4%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: end;
+    padding-bottom: 1%; */
+}
+.div{
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+}
+#btnn{
+    align-items: end;
+    padding-bottom: 1%; 
+}

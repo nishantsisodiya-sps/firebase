@@ -1,0 +1,35 @@
+<div class="user-auth">
+    <div class="myDiv">
+       <h1>User Login</h1>
+       <form class="common-form">
+         <p class="error-p"></p>
+         <input
+           type="text"
+           class="form-input"
+           name="email"
+           placeholder="Enter User Email"
+           [(ngModel)]="email"
+         />
+         <input
+         type="password"
+         class="form-input"
+         name="password"
+         placeholder="Enter User Password"
+         [(ngModel)]="password"
+       />
+       <br>
+       <br>
+       <button  color="primary" class="btn btn-success" (click)="login()">Login</button>
+       
+       <br>
+       <p>Want to Create Account ? <a href="/register">Click Here</a></p>
+       <a href="/forgot-password">Forgot Password</a>
+       <br>
+        <div id="google" > 
+          <p (click)="signInWithGoogle()"><img src="../../../assets/icons8-google-48.png"></p>
+          <p (click)="signInWithfacebook()"><img src="../../../assets/icons8-facebook-48.png"></p>
+          <p (click)="signInWithGitHub()"><img src="../../../assets/icons8-github-48.png"></p>
+        </div>
+       </form>
+      </div> 
+      </div>

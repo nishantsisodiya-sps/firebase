@@ -1,0 +1,28 @@
+<div class="user-auth">
+    <div class="myDiv">
+       <h1>Register</h1>
+       <form class="common-form">
+         <p class="error-p"></p>
+         <input
+           type="text"
+           class="form-input"
+           name="email"
+           placeholder="Enter User Email"
+           [(ngModel)]="email"
+         />
+         <input
+         type="password"
+         class="form-input"
+         name="password"
+         placeholder="Enter User Password"
+         [(ngModel)]="password"
+       />
+       <br>
+       <br>
+       <button  color="primary" class="btn btn-success" (click)="register()">Register</button>
+       <br>
+       <br>
+       <p>Want to Create Account ? <a href="/login">Click Here</a></p>
+       </form>
+      </div> 
+      </div>
