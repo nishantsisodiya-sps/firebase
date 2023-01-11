@@ -77,21 +77,6 @@ export class AuthService {
       alert(err.message)
     })
   }
-  signInFacebook(){
-    return this.fireAuth.signInWithPopup(new FacebookAuthProvider).then(res=>{
-      this.router.navigate(['/dashboard']);
-      localStorage.setItem('token', JSON.stringify(res.user?.uid))
-    },err=>{
-      alert(err.message)
-    })
-  }
-  signInGithub(){
-    return this.fireAuth.signInWithPopup(new GithubAuthProvider).then(res=>{
-      this.router.navigate(['/dashboard']);
-      localStorage.setItem('token', JSON.stringify(res.user?.uid))
-    },err=>{
-      alert(err.message)
-    })
-  }
+
   
 }

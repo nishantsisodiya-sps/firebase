@@ -34,12 +34,4 @@ export class LoginComponent implements OnInit {
   signInWithGoogle(){
     this.auth.signInGoogle();
   }
-
-  signInWithfacebook(){
-    this.auth.signInFacebook();
-  }
-
-  signInWithGitHub(){
-    this.auth.signInGithub();
-  }
 }
