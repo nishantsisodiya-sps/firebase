@@ -11,6 +11,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './components/varify-email/varify-email.component';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/';
+import { FileuploadComponent } from './components/fileupload/fileupload.component'; 
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { VarifyEmailComponent } from './components/varify-email/varify-email.com
     RegisterComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    VarifyEmailComponent
+    VarifyEmailComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FormsModule
+    FormsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

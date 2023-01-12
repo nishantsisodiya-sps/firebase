@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth'
 import { Router } from '@angular/router';
-import {GoogleAuthProvider , FacebookAuthProvider , GithubAuthProvider} from '@angular/fire/auth'
+import {GoogleAuthProvider , FacebookAuthProvider , GithubAuthProvider , PhoneAuthProvider} from '@angular/fire/auth'
 
 
 @Injectable({
@@ -76,6 +76,7 @@ export class AuthService {
     },err=>{
       alert(err.message)
     })
+
   }
 
   
