@@ -72,7 +72,6 @@ export class DashboardComponent implements OnInit {
 
   updateStudent(student:Student){
     console.log(student)
-    this.data.updateStudent(student)
   }
 
   deleteStudent(student:Student){

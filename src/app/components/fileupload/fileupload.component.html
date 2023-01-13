@@ -1,13 +1,15 @@
-<!-- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
-    
-        <div class="col-md-4 mt-5">
-
-           <div class="card border-0 shadow">
+      
+      <div class="col-md-5 mt-3">
+        <button routerLink="/dashboard" class="btn btn-outline-primary">Back to Students</button>
+        <br>
+        <br>
+           <div class="card border-1 shadow">
                <div class="card-body">x
                 <div>
-                    <input type="file" class="text-nowrap text-truncate file" (change)="selectFile($event)">
-                    <button type="button" class="btn btn-outline-warning" [disabled] = "!selectedFiles" (click)="uploadFile()">Upload</button>
+                    <input id="inputfile" type="file" class="text-nowrap text-truncate file" (change)="selectFile($event)">
+                    <button type="button" class="btn btn-outline-success" [disabled] = "!selectedFiles" (click)="uploadFile()">Upload</button>
                 </div>
     
                 <div class="progress mt-2">
@@ -26,7 +28,7 @@
 
 
 
-        <div class="col-md-8">
+        <div class="col-md-7">
 
             <div class="mb-3 mt-3">
                 <h4 class="text-primary">File list</h4>
@@ -42,8 +44,8 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let file of listOfFiles">
-                    <th>{{file.name}}</th>
-                    <td>{{file.size}}</td>
+                    <th><img src="{{file.url}}" alt=""></th>
+                    <td>{{file.size}} Kb</td>
                     <td>
                         <a href="{{file.url}}" class="btn btn-outline-info" type="button" download>Download</a>
                         <a class="btn btn-outline-danger ms-2" type="button" (click)="deleteFile(file)">Delete</a>
@@ -54,4 +56,4 @@
 
         </div>
     </div>
-</div> -->
+</div>
