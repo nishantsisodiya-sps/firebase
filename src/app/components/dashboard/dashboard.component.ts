@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { Student } from 'src/app/model/students';
 import { AuthService } from 'src/app/shared/auth.service';
 import { DataService } from 'src/app/shared/data.service';
@@ -23,9 +24,16 @@ export class DashboardComponent implements OnInit {
   last_name: string = '';
   email: string = '';
   contact: string = '';
+  student: any;
 
  
-  constructor(private auth:AuthService, private router:Router, private data:DataService) { }
+  constructor(private auth:AuthService, private router:Router, private data:DataService, private toast:NgToastService) {
+    this.id 
+    this.first_name
+    this.last_name
+    this.email
+    this.contact 
+   }
 
   ngOnInit(): void {
     this.getAllStudent();
@@ -33,6 +41,7 @@ export class DashboardComponent implements OnInit {
 
   logout(){
     this.auth.logOut();
+    this.toast.info({detail:"" , summary: "Logged out successfully", duration:2000})
     this.router.navigate(['/login'])
   }
 
@@ -59,6 +68,7 @@ export class DashboardComponent implements OnInit {
     this.studentObj.contact = this.contact;
 
     this.data.addStudents(this.studentObj);
+    this.toast.success({detail:"New student" , summary: "Student added", duration:2000})
     this.resetForm(); 
   }
 
@@ -72,10 +82,13 @@ export class DashboardComponent implements OnInit {
 
   updateStudent(student:Student){
     console.log(student)
+    // this.toast.info({detail:"" , summary: "Student Updated", duration:2000})
   }
 
   deleteStudent(student:Student){
     if(window.confirm('Are you sure ? You want to delete'+ student.first_name+' '+student.last_name+' ?'))
     this.data.deleteStudent(student);
+    this.toast.warning({detail:"" , summary: "Student Deleted", duration:2000})
+
   }
 }

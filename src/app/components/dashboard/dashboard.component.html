@@ -13,16 +13,16 @@
                     <label for="firstname">First name</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="last_name">
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="last_name" >
                     <label for="lastName">Last name</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" >
                     <label for="email">Email address</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="contact">
-                    <label for="mobile">Mobile</label>
+                    <input type="text" class="form-control" id="contact" name="contact" [(ngModel)]="contact">
+                    <label for="contact">Contact</label>
                 </div>
                 <button type="button" class="btn btn-outline-success" (click)="addStudent()">Add Student</button>
             </div>

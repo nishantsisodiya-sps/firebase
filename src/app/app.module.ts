@@ -13,6 +13,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VarifyEmailComponent } from './components/varify-email/varify-email.component';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore/';
 import { FileuploadComponent } from './components/fileupload/fileupload.component'; 
+import {NgToastModule} from 'ng-angular-popup'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FileuploadComponent } from './components/fileupload/fileupload.componen
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

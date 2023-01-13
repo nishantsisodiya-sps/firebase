@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { NgToastService } from 'ng-angular-popup';
 import { finalize } from 'rxjs';
 import { FileMetaData } from 'src/app/model/file-meta-data';
 import { DataService } from 'src/app/shared/data.service';
@@ -19,7 +20,7 @@ export class FileuploadComponent implements OnInit {
   listOfFiles : FileMetaData[] = [];
 
   constructor(private fileService:FileService, private data : DataService, private filestorage:AngularFireStorage,
-    private fireStore:AngularFirestore) { }
+    private fireStore:AngularFirestore , private toast : NgToastService) { }
 
   ngOnInit(): void {
     this.getAllFiles()
@@ -47,6 +48,7 @@ export class FileuploadComponent implements OnInit {
     })
     ).subscribe((res:any)=>{
       this.percentage = (res.bytesTransferred * 100 / res.totalBytes)
+      this.toast.success({detail:"" , summary: "File Uploaded", duration:2000})
     }, err =>{
       console.log("Error Occured")
     })
@@ -67,6 +69,7 @@ export class FileuploadComponent implements OnInit {
   deleteFile(file: FileMetaData){
     if(window.confirm('Are you sure you want to delete '+file.name   + '?')){
     this.fileService.deleteFiles(file);
+    this.toast.warning({detail:"" , summary: "File Deleted", duration:2000})
     this.ngOnInit();
     }
   }
