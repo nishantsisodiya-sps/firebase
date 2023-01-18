@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
     this.first_name
     this.last_name
     this.email
-    this.contact 
+    this.contact  
    }
 
   ngOnInit(): void {

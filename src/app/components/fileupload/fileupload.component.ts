@@ -43,7 +43,8 @@ export class FileuploadComponent implements OnInit {
         this.currentFileUpload.size = this.currentFileUpload.file.size;
         this.currentFileUpload.name = this.currentFileUpload.file.name;
 
-        this.fileService.saveDataOfFile(this.currentFileUpload);
+        this.fileService.saveDataOfFile(this.currentFileUpload);  
+        
       })
     })
     ).subscribe((res:any)=>{
